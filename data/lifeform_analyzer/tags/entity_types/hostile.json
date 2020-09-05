@@ -1,8 +1,9 @@
 {
   "replace": false,
-  "values": [
-    "minecraft:blaze",
+  "values": ["minecraft:blaze",
     "minecraft:cave_spider",
+    "minecraft:creeper",
+    "minecraft:dragon_fireball",
     "minecraft:drowned",
     "minecraft:elder_guardian",
     "minecraft:ender_dragon",
@@ -24,9 +25,11 @@
     "minecraft:pillager",
     "minecraft:ravager",
     "minecraft:shulker",
-    "minecraft:shulker_bullet",
     "minecraft:silverfish",
     "minecraft:skeleton",
+    "minecraft:skeleton_horse",
+    "minecraft:slime",
+    "minecraft:small_fireball",
     "minecraft:spider",
     "minecraft:stray",
     "minecraft:vex",
@@ -36,6 +39,7 @@
     "minecraft:wither_skeleton",
     "minecraft:zoglin",
     "minecraft:zombie",
+    "minecraft:zombie_horse",
     "minecraft:zombie_villager"
   ]
 }

@@ -12,18 +12,6 @@
           }
         }
       }
-    },
-    {
-      "condition": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "equipment": {
-          "offhand": {
-            "item": "minecraft:compass",
-            "nbt": "{LFA:1b}"
-          }
-        }
-      }
     }
   ]
 }
