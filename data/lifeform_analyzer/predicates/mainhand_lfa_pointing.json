@@ -6,9 +6,9 @@
       "entity": "this",
       "predicate": {
         "equipment": {
-          "offhand": {
+          "mainhand": {
             "item": "minecraft:compass",
-            "nbt": "{LFA:1b}"
+            "nbt": "{LFApointing:1b}"
           }
         }
       }

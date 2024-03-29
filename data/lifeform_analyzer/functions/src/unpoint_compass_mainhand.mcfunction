@@ -1,17 +1,9 @@
 # First, we copy the item to a storage.
 execute in minecraft:overworld run data modify storage lifeform_analyzer:calibrate_slot Item set from entity @s SelectedItem
 
-# In order to unpoint, we just mix up the dimension
-execute as @s[predicate=lifeform_analyzer:in_overworld] run execute in minecraft:overworld run data modify storage lifeform_analyzer:calibrate_slot Item merge value {tag: {LodestoneDimension: "minecraft:the_nether"}}
-execute as @s[predicate=lifeform_analyzer:in_the_nether] run execute in minecraft:overworld run data modify storage lifeform_analyzer:calibrate_slot Item merge value {tag: {LodestoneDimension: "minecraft:the_end"}}
-execute as @s[predicate=lifeform_analyzer:in_the_end] run execute in minecraft:overworld run data modify storage lifeform_analyzer:calibrate_slot Item merge value {tag: {LodestoneDimension: "minecraft:overworld"}}
+# Modify the compass in the box
+execute as @s at @s run function lifeform_analyzer:src/unpoint_compass
 
-execute in minecraft:overworld run data modify storage lifeform_analyzer:calibrate_slot Item.tag.LodestonePos.X set value 0
-execute in minecraft:overworld run data modify storage lifeform_analyzer:calibrate_slot Item.tag.LodestonePos.Y set value 0
-execute in minecraft:overworld run data modify storage lifeform_analyzer:calibrate_slot Item.tag.LodestonePos.Z set value 0
-
-execute in minecraft:overworld run data modify storage lifeform_analyzer:calibrate_slot Item.Slot set value 0b
-
-execute in minecraft:overworld run data modify block 0 0 0 Items append from storage lifeform_analyzer:calibrate_slot Item
-
-execute in minecraft:overworld run item replace entity @s weapon.mainhand from block 0 0 0 container.0
+# Then, we move the shulker box item back to the player's inventory.
+execute if entity @s[predicate=lifeform_analyzer:mainhand_lfa] run execute in minecraft:overworld run item replace entity @s weapon.mainhand from block 0 0 0 container.0
+data remove block 0 0 0 Items

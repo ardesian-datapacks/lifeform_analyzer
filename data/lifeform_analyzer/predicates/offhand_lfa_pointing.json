@@ -8,7 +8,7 @@
         "equipment": {
           "offhand": {
             "item": "minecraft:compass",
-            "nbt": "{LFA:1b}"
+            "nbt": "{LFApointing:1b}"
           }
         }
       }
